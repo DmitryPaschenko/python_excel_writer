@@ -1,15 +1,18 @@
-Generate excel files.
+# Generate excel files.
+
 Based on "openpyxl" - A Python library to read/write Excel 2010 xlsx/xlsm files
 
-Install:
+###Install:
 
 1) pip install openpyxl
+
 2) Copy folder "excel" to you project or create GIT submodules
 
 
-USING EXAMPLE:
+###USING EXAMPLE:
 
 
+```
 from excel.ExcelFile import ExcelFile
 from excel.ExcelRowTemplate import ExcelRowTemplate
 from excel.ExcelCellOptions import ExcelCellOptions
@@ -64,4 +67,5 @@ class DownloadReportView(View):
             counter += 1
 
         return HttpResponse(excel_file.get_virtual_workbook(), content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+```
 
